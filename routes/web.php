@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/users/{id}', [UserController::class, 'show']);
+
+Route::controller(CommentController::class)->prefix('/users/{id}/comments')->group( function () {
+    Route::post('/', 'store');
+});

@@ -20,4 +20,14 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
     ];
+
+    /**
+     * User has many comments
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
