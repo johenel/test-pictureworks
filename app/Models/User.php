@@ -21,6 +21,15 @@ class User extends Authenticatable
         'name',
     ];
 
+    protected $with = [
+        'comments'
+    ];
+
+    protected $visible = [
+        'name',
+        'comments'
+    ];
+
     /**
      * User has many comments
      *

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -14,6 +15,8 @@ class UserController extends Controller
         if (empty($user)) {
             abort(404);
         }
+
+        Auth::login($user);
 
         return view('user-card', compact('user'));
     }

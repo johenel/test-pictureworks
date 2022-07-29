@@ -13,7 +13,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required|exists:users,id',
+            'user_id' => 'required|exists:users,id',
             'comments' => 'required',
             'password' => 'required|in:' . env('STATIC_PASSWORD')
         ];
