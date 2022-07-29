@@ -20,3 +20,11 @@ Description - Create a user comment with a terminal command.
 <br>
 - user_id - numeric, required.
 - comment - string, required.
+
+## Development Timeline
+- User configs (10 mins)
+- User web routes/functions + Unit test (15 mins)
+- Comment resource backend configs (30 mins)
+- Laradock (docker) setup (15 mins) 
+- Command to create a user comment (15 mins)
+- Front end for user comment section page + comment form (1 hr)
