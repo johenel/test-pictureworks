@@ -30,7 +30,7 @@ class CommentControllerTest extends TestCase
             'comments' => 'This is a test comment.',
             'password' => env('STATIC_PASSWORD')
         ]);
-        // Assert that the request returns 200
-        $response->assertOk();
+        // Assert that the request redirects to user comment section page
+        $response->assertStatus(302);
     }
 }

@@ -28,3 +28,8 @@ Description - Create a user comment with a terminal command.
 - Laradock (docker) setup (15 mins) 
 - Command to create a user comment (15 mins)
 - Front end for user comment section page + comment form (1 hr)
+
+
+# Unit Test
+
+[![Unit Test](/public/images/unit-test.png)
